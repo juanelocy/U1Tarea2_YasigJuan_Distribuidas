@@ -66,10 +66,10 @@ Se realizaron mejoras en los estilos visuales del chat para hacerlo más moderno
 
 ## Capturas de pantalla
 Implementacion del chat mas la agregacion de emojis y cambio de estilos mas agradable (/capturasDePantalla/Emojis.png)
-[/capturasDePantalla/Emojis.png](/capturasDePantalla/Emojis.png)
+[https://i.imgur.com/CnwFaDS.png](https://i.imgur.com/CnwFaDS.png)
 
 Visualizacion final (/capturasDePantalla/Interactividad.png)
-[/capturasDePantalla/Interactividad.png](/capturasDePantalla/Interactividad.png)
+[https://i.imgur.com/gbL7hEi.png](https://i.imgur.com/gbL7hEi.png)
 
 ---
 
@@ -77,6 +77,7 @@ Visualizacion final (/capturasDePantalla/Interactividad.png)
 Esta tarea permitió afianzar los conocimientos sobre comunicación en tiempo real usando Socket.io, así como la integración de vistas, rutas y middlewares en una aplicación Node.js.
 ### Retos y soluciones:
 -Estilos CSS: Fue necesario reorganizar algunas clases para lograr una interfaz más intuitiva.
+
 -Botón de emojis: Aunque se implementó visualmente, no se logró integrar un selector funcional. Como alternativa, se puede usar Win + . en Windows para abrir el panel de emojis del sistema.
 
 ---

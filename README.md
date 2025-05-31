@@ -66,9 +66,11 @@ Se realizaron mejoras en los estilos visuales del chat para hacerlo más moderno
 
 ## Capturas de pantalla
 Implementacion del chat mas la agregacion de emojis y cambio de estilos mas agradable (/capturasDePantalla/Emojis.png)
+
 [https://i.imgur.com/CnwFaDS.png](https://i.imgur.com/CnwFaDS.png)
 
 Visualizacion final (/capturasDePantalla/Interactividad.png)
+
 [https://i.imgur.com/gbL7hEi.png](https://i.imgur.com/gbL7hEi.png)
 
 ---

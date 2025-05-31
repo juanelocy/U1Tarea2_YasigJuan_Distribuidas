@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/emoji-button.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Chat.css" />
+    <style>
+        body {
+            background: linear-gradient(to bottom, #4caf50, #388e3c) !important;
+            min-height: 100vh;
+            color: white;
+        }
+
+        header h1 {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        #all-messages {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 1rem;
+            max-height: 60vh;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .send-message {
+            display: flex;
+            gap: 10px;
+        }
+
+        .send-message input {
+            flex: 1;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .send-message button {
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Web Chat</h1>
+    </header>
+
+    <main class="container mt-4">
+        <div id="all-messages" class="shadow-sm">
+            <!-- Los mensajes aparecerán aquí -->
+        </div>
+
+        <div class="send-message">
+            <input type="text" id="message" class="form-control" placeholder="Escribe tu mensaje..." />
+            <button id="emoji-btn" class="btn btn-light">😊</button>
+
+            <button type="button" id="send-message" class="btn btn-light">Enviar</button>
+        </div>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+<!-- Alternativa 2 (UNPKG) -->
+<script src="https://unpkg.com/@joeattardi/emoji-button@4.6.2/dist/emoji-button.min.js"></script>
+
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const emojiBtn = document.querySelector("#emoji-btn");
+    const input = document.querySelector("#message");
+
+    if (typeof EmojiButton !== "undefined") {
+      const picker = new EmojiButton();
+
+      picker.on("emoji", (emoji) => {
+        input.value += emoji;
+      });
+
+      emojiBtn.addEventListener("click", () => {
+        picker.togglePicker(emojiBtn);
+      });
+    } else {
+      console.error("EmojiButton no está disponible.");
+    }
+  });
+</script>
+
+
+</body>
+
+</html>
